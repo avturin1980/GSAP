@@ -1,0 +1,8 @@
+body {
+  margin: 10px;
+  background-color: #000;
+}
+
+.box {
+  display: block;
+}
