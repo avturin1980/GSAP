@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title> ModifiersPlugin [Simplest example ] </title> 
+    <link rel="stylesheet" type="text/css" href="ModifiersPlugin.css">
+    <script src="C:\code\gsap.min.js"></script>
+  </head>
+
+  <body>
+    <div id="rect"> </div>
+    <script>
+      gsap.to("#rect", 5, {
+        x: 850, y: 360,
+        repeat: 1, yoyo: true, ease: "none",
+        modifiers: {
+            y: y => sinA(y)    
+        }       
+      });
+
+      function sinA(alpha) {
+        return Math.sin(parseFloat(alpha) / 57.296) * 300 + 300 + "px";
+      }; 
+    </script>
+  </body>
+</html>
+

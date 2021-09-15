@@ -1,0 +1,26 @@
+body {
+  margin: 0px
+}
+
+svg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.flare{
+  filter: blur(2px) 
+}
+
+.eyeball{
+  filter: blur(1px) 
+}  
+
+
+
+
+
+
+
+

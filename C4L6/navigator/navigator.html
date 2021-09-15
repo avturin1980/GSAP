@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title> Directional rotation [navigator] </title> 
+        <script src="C:\code\gsap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="navigator.css">
+    </head>
+
+    <body>
+        <svg>
+            <image id="map" xlink:href="map.jpg" x="0" y="0" width="4112" height="2136"/>
+            <g id = "car">
+            <polygon class="cls-1" points="44 67 44 1 87 93 44 67"/>
+            <polygon class="cls-2" points="44 67 44 1 1 93 44 67"/>
+            <polygon class="cls-3" points="44 67 87 93 1 93 44 67"/>
+            </g>
+        </svg> 
+
+        <script>
+            const origX = window.innerWidth / 2 + 33;
+            const origY = window.innerHeight / 2 + 22;
+            const svgOrig = origX + " " + origY;
+            const shiftX = (1360 - window.innerWidth) / 2;
+            const shiftY = (683 - window.innerHeight) / 2;
+
+            gsap.set("#car", {x: window.innerWidth/2, y: window.innerHeight/2, scale: 0.5});
+            gsap.set("#map", {x: -1750 - shiftX, y: -1145 - shiftY});
+
+            let tl = gsap.timeline({repeat:-1, defaults: {svgOrigin: svgOrig, ease: "power2.inOut"}});
+            tl.set("#map", {rotate: 16.5});
+            tl.to("#map", 1, {y: -490 - shiftY});
+            tl.to("#map", 1, {rotate: -75});
+            tl.to("#map", 1, {y: -40 - shiftY});
+            tl.to("#map", 1, {rotate: -163});
+            tl.to("#map", 1, {y: 600 - shiftY});
+            tl.to("#map", 1, {rotate: "107_short"});
+            tl.to("#map", 1, {y: 1056 - shiftY});
+            tl.to("#map", 1, {rotate: 16.5});
+        </script>
+    </body>
+</html>
+

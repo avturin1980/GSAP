@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+	    <title> SnapPlugin [ Simplest examples  ] </title> 
+	    <script src="C:\code\gsap.min.js"></script>
+    </head>
+
+
+    <body>
+        <svg width="900" height="600"> 
+            <circle id="cr1" cx="50" cy="300" r="24" fill="#4e006e"/>
+        </svg> 
+        
+		<script>
+           gsap.to("#cr1", 10, {x: 500, r: 200, snap: "x,r"});
+        // gsap.to("#cr1", 5, { x: 800, snap: {x: 50}});
+        // gsap.to("#cr1", 5, { x: 600, snap: {x: [200, 400, 500]}});
+        // gsap.to("#cr1", 10, {delay: 2, x: 800,
+        //     snap: {x: {values: [200, 400, 800], radius: 30}}
+        // });
+        </script>
+    </body>
+    
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <script src="C:\code\gsap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="arrow.css">
+    </head>
+    <body>
+        <svg>
+            <image class="arrow" xlink:href="arrow.png" 
+                   x="25%" y="47%" width="10%"/>
+            <image class="arrow" xlink:href="arrow.png" 
+                   x="37%" y="43%" width="20%"/>
+            <image class="arrow" xlink:href="arrow.png" 
+                   x="58%" y="45%" width="15%"/>
+        </svg> 
+        <script>
+            let tl = gsap.timeline({defaults: {ease: "power2.inOut"}});
+            tl.to(".arrow", 2, {transformOrigin: "50% 50%",
+                                rotate: "200_short"});
+            tl.to(".arrow", 2, {svgOrigin: window.innerWidth/2 + " " + 
+                                           window.innerHeight/2,
+                                rotate: "360"});
+        </script>
+    </body>
+</html>
+

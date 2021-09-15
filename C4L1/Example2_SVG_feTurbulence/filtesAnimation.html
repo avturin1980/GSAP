@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title> Animation of CSS and SVG filters </title> 
+    <link rel="stylesheet" type="text/css" href="filtesAnimation.css">
+    <script src="C:\code\gsap.min.js"></script>
+  </head>
+  <body>
+    <svg id="SVGcontainer">
+      <defs>
+        <filter id="displacementFilter">
+          <feTurbulence id="feTurbulence" type="turbulence" 
+            baseFrequency="0.02" numOctaves="2" result="turbulence"/>
+          <feDisplacementMap in2="turbulence" in="SourceGraphic"
+            scale="10" xChannelSelector="B" yChannelSelector="R"/>
+        </filter>
+      </defs>
+
+      <image xlink:href="sea.jpg" height="100%"
+        style="filter:url(#displacementFilter)"/>
+    </svg>
+
+    <script src="filtesAnimation.js"></script>
+  </body>
+</html>
+

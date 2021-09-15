@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Animation of complex values  </title> 
+        <script src="C:\code\gsap.min.js"></script>
+    </head>
+
+    <body style="background-color: black;">
+        <p id="text" style="font-size: 300px; text-align: center; 
+           line-height: 200px; margin: 15% auto; 
+           text-shadow: 10px 10px 4px white;"> GSAP </p> 
+        <script>
+            window.addEventListener('mousemove', function(e) {	
+                gsap.set("#text", {textShadow: 
+                    (-(e.pageX-window.innerWidth/2)/60) +
+                    "px "+(-(e.pageY-window.innerHeight/2)/60) + 
+                    "px 2px white, " +
+                    (-(e.pageX-window.innerWidth/2)/50) +
+                    "px "+(-(e.pageY-window.innerHeight/2)/50) + 
+                    "px 30px yellow"
+                });
+            }, false);
+        </script>
+    </body>
+</html>
+

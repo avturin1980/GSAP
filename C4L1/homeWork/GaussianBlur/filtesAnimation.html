@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title> Animation of CSS and SVG filters </title> 
+    <link rel="stylesheet" type="text/css" href="filtesAnimation.css">
+    <script src="C:\code\gsap.min.js"></script>
+  </head>
+  <body>
+    <svg id="SVGcontainer">
+      <defs>
+        <filter id="blurMe">
+          <feGaussianBlur id = "GaussianBlur" 
+          in="SourceGraphic" stdDeviation="0" />
+        </filter>
+      </defs>
+
+      <image xlink:href="sea.jpg" height="100%"
+        style="filter:url(#blurMe)"/>
+    </svg>
+
+    <script src="filtesAnimation.js"></script>
+  </body>
+</html>
+

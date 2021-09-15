@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8"> 
+        <title> xPercent yPercent </title> 
+        <script src="C:\code\gsap.min.js"></script>
+    </head>
+
+    <body>
+        <p> 
+            <button onclick=mooveX()> xPercent: "+=100" </button> 
+            <button onclick=mooveY()> yPercent: "+=200" </button>
+        </p>
+        <svg width="900" height="600">
+            <rect class="r" x="100" y="200" width="100" height="50"/>
+            <rect class="r" x="100" y="300" width="50"  height="30"/>
+            <rect class="r" x="100" y="400" width="25"  height="10"/>
+        </svg> 
+
+        <script>
+            function mooveX(){gsap.to(".r", 1, {xPercent: "+=100"})};
+            function mooveY(){gsap.to(".r", 1, {yPercent: "+=200"})};
+        </script>
+    </body>
+</html>
+

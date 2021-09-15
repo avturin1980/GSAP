@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> CSSPlugin vs AttrPlugin [Simplest example] </title> 
+        <script src="C:\code\gsap.min.js"></script>
+        <style>
+            svg {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <svg>
+            <rect id="r1" x="200" y="200" width="100" height="100"/>
+            <rect id="r2" x="200" y="400" width="100" height="100"/>
+        </svg> 
+        <script>
+            gsap.to("#r1", 2, {x: 600} );  // CSSPlugin
+            gsap.to("#r2", 2, {attr: {x: 600}});  //AttrPlugin
+        </script>
+    </body>
+</html>
+

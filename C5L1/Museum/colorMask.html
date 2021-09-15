@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head> 
+		<title> Application of masks [ Museum ] </title> 
+		<link rel="stylesheet" type="text/css" href="colorMask.css">
+	</head>
+
+
+<body>
+	<svg id="SVGcontainer"></svg>
+
+	<script>
+		let mask = "";
+		let defsElement = "";
+
+		window.addEventListener('mousemove', function(e) {
+			defsElement = '<radialGradient id="diffusion" r="40%">' + 
+			'<stop stop-color="white" offset="20%"/>'+
+            '<stop stop-color="black" offset="100%"/>'+
+			'</radialGradient>'+
+
+			'<g id="main_image">'+
+				'<image xlink:href="hatch.jpg" width="100%"/>'+
+			'</g>'+
+
+			'<g id="mask_image">'+
+				'<image xlink:href="colour.jpg" width="100%"/>'+
+			'</g>';
+
+			mask = '<circle cx="' + e.pageX + '" cy="' + e.pageY + '" r="40%" fill="url(#diffusion)"/>'
+			
+			SVGcontainer.innerHTML = "";
+			SVGcontainer.innerHTML += 
+			'<defs> '+ 
+				defsElement + 
+			'</defs>'+
+	
+			'<mask id="mask">' +
+			    mask +
+			'</mask>' +
+
+			'<use href="#main_image" x="0" y="0" opacity="0.9"/> ' +
+			'<use  mask="url(#mask)" href="#mask_image" x="0" y="0"/> '
+       }, false);
+	  </script>
+
+</body>
+
+</html>

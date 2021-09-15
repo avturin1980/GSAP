@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title> Simultaneous animation of 2d and 3d properties </title> 
+    <link rel="stylesheet" type="text/css" href="Simultaneous2d3d.css">
+    <script src="C:\code\gsap.min.js"></script>
+  </head>
+
+  <body style="background-color: black">
+    <div class="div">  
+      <img src="1.gif" style="width:100%; height:100%">
+      <svg width="100%" height="130%" >
+        <image id="f1" xlink:href="2.gif" x="80%" y="35%" width="6%"/> 
+        <image id="f2" xlink:href="3.gif" x="20%" y="-9%" width="6%"/> 
+      </svg> 
+    </div>
+
+    <script>
+      gsap.defaults({transformOrigin: "50% 50% 200%", 
+                     transformPerspective: 3000,  
+                      repeat: -1, ease: "none"});
+      gsap.set(".div", {rotationY: 90});
+      gsap.set("#f1", {scale: 0.5});
+      gsap.set("#f2", {scale: 6});
+      gsap.to(".div", 100, {rotationY: 3600});
+      gsap.to("#f1", 5, {scale: 3.5, yoyo: true});
+      gsap.to("#f2", 5, {scale: 1, yoyo: true});
+    </script>
+  </body>
+</html>
+
+
+
+
+

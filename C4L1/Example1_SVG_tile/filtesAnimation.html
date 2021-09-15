@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title> Animation of CSS and SVG filters </title> 
+    <link rel="stylesheet" type="text/css" href="filtesAnimation.css">
+    <script src="C:\code\gsap.min.js"></script>
+  </head>
+  <body>
+    <svg id="SVGcontainer">
+      <defs>
+        <filter id="tile">
+          <feTile id="feTile" in="SourceGraphic" x="0" y="0"
+            width="10" height="10"/>
+          <feTile/>
+        </filter>
+
+      </defs>
+
+      <image xlink:href="sea.jpg" height="100%"
+        style="filter:url(#tile)"/>
+    </svg>
+
+    <script src="filtesAnimation.js"></script>
+  </body>
+</html>
+

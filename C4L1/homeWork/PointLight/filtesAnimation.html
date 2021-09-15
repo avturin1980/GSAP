@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title> Animation of CSS and SVG filters </title> 
+    <link rel="stylesheet" type="text/css" href="filtesAnimation.css">
+    <script src="C:\code\gsap.min.js"></script>
+  </head>
+  <body>
+    <svg id="SVGcontainer">
+      <defs>
+        <filter id="lighting">
+          <feSpecularLighting result="specOut"
+            specularExponent="20" lighting-color="#bbbbbb">
+            <fePointLight id="PointLight" x="550" y="175" z="200"/>
+          </feSpecularLighting>
+          <feComposite in="SourceGraphic" in2="specOut"
+            operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+        </filter>
+      </defs>
+
+      <image xlink:href="sea.jpg" height="100%"
+        style="filter:url(#lighting)"/>
+    </svg>
+    <script src="filtesAnimation.js"></script>
+  </body>
+</html>
+

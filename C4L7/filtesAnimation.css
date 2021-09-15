@@ -1,0 +1,26 @@
+body {
+  margin: 0px
+}
+
+svg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#im1 { 
+  filter: sepia(0%) 
+}
+
+#im2 { 
+  filter: hue-rotate(0deg) 
+}
+
+#im3 { 
+  filter: saturate(100%) 
+}
+
+#im4 { 
+  filter: opacity(100%) 
+}
+
