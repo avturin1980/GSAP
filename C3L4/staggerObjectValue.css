@@ -1,0 +1,33 @@
+body {
+  width: 1240px;
+  height: 766px;
+  overflow: hidden;
+  background: white;
+  line-height: 0px;
+}
+
+.block {
+  width: 142px;
+  height: 95px;
+  position: relative;
+  display: block;
+  display: inline-block;
+}
+
+.image {
+  border: 0px;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 1140px;
+  height: 760px;
+}
+
+.mask {
+  border: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 1080px;
+}
