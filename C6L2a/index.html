@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Draggable [Simple Example]</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="../gsap.min.js"></script>
+		<script src="../Draggable.min.js"></script>
+	</head>
+
+	<body>
+		<div id="area">
+			<div id="draggableElement">Drag me!</div>
+			<img id="burger" src="burger.png" />
+			<img id="bag" src="bag.png" />
+		</div>
+
+		<script>
+			gsap.registerPlugin(Draggable)
+			Draggable.create('#burger, #draggableElement', {
+				onDrag: function () {
+					if (this.hitTest('#bag', '100%')) {
+						gsap.to(this.target, {
+							opacity: 0,
+							scale: 0,
+							ease: 'circ.in',
+						})
+					}
+				},
+			})
+		</script>
+	</body>
+</html>

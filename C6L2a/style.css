@@ -1,0 +1,26 @@
+body {
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+}
+
+#area {
+	width: 800px;
+	height: 550px;
+	display: flex;
+	background-color: black;
+	align-items: center;
+}
+
+#draggableElement {
+	width: 200px;
+	height: 100px;
+	border-radius: 60px;
+	background-color: green;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	line-height: 90px;
+}
