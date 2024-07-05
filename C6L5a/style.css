@@ -1,0 +1,55 @@
+body {
+	margin: 0;
+	background-color: black;
+	overflow-x: hidden;
+}
+
+#area {
+	display: flex;
+	height: 147vh;
+	width: 100vw;
+	justify-content: center;
+}
+
+img {
+	position: absolute;
+}
+
+#img1 {
+	z-index: 2;
+	margin-top: -5%;
+	width: 110vw;
+	height: 156vh;
+}
+/* 
+#img2 {
+	z-index: 1;
+	margin-top: 20%;
+	width: 100vw;
+	height: 120vh;
+}
+
+#img3 {
+	z-index: 0;
+	margin-top: -40%;
+	width: 200vw;
+	height: 400vh;
+}
+
+.container {
+	z-index: 3;
+	margin: 5%;
+	position: relative;
+	color: white;
+	font-size: 5vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.column {
+	flex: 0 1 48%;
+	box-sizing: border-box;
+	padding: 10px;
+} */
